@@ -13,8 +13,7 @@ class FlaskApp:
         self.register_routes()
         
         
-    def register_routes(self):  
-        self.authBp = AuthController().authBp
+    def register_routes(self):
         self.app.register_blueprint(AuthController().authBp, url_prefix="/auth")
         self.app.register_blueprint(UserController().user_bp, url_prefix="/user")
     

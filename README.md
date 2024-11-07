@@ -45,15 +45,8 @@
     pip install flask-cors
     ```
 
-5. Настройте переменные окружения. Создайте файл `.env` в корне проекта и добавьте следующие переменные:
-    ```plaintext
-    FLASK_APP=main.py
-    FLASK_ENV=development
-    DATABASE_URL=ваш_адрес_базы_данных
-    SECRET_KEY=ваш_секретный_ключ
-    ```
 
-6. Инициализируйте базу данных:
+5. Инициализируйте базу данных:
     ```bash
     flask db init
     flask db migrate
