@@ -1,9 +1,9 @@
 from flask import Flask
+
 from config.config import Config
-from database import init_db
+from database.init import init_db
 from src.auth.controllers.auth import AuthController 
 from src.user.controllers.user_controller import UserController
-
 
 class FlaskApp:
     def __init__(self):
@@ -21,6 +21,8 @@ class FlaskApp:
     def start(self):
         self.app.run(debug=True)
 
+my_app = FlaskApp()
+app = my_app.app
+
 if __name__ == "__main__":
-    my_app = FlaskApp()
     my_app.start()

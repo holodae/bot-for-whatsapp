@@ -1,5 +1,5 @@
 from database.models import User
-from database import db
+from database.init import db
 
 class UserService:
     @staticmethod
